@@ -21,10 +21,10 @@ public class SelectFromDB {
 			// Starting Statement
 			st = con.createStatement();
 
-			rs = st.executeQuery("select * from department"); //or seller
+			rs = st.executeQuery("select * from seller"); //or department
 			
 			while (rs.next()) {
-				System.out.println(rs.getInt("Id") + ", " + rs.getString("Name"));
+				System.out.println(rs.getInt("Id") + ", " + rs.getString("Name") + ", " + rs.getString("BaseSalary") + ", " + rs.getString("DepartmentId"));
 			}
 
 		} catch (SQLException e) {
