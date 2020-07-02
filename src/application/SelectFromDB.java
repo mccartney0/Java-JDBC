@@ -21,7 +21,7 @@ public class SelectFromDB {
 			// Starting Statement
 			st = con.createStatement();
 
-			rs = st.executeQuery("select * from seller");
+			rs = st.executeQuery("select * from department"); //or seller
 			
 			while (rs.next()) {
 				System.out.println(rs.getInt("Id") + ", " + rs.getString("Name"));
